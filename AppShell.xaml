@@ -6,7 +6,7 @@
     xmlns:views="clr-namespace:Notes.Views"
     >
 
-    <!-- Flyout Items -->
+    <!-- Flyout Items-->
     <FlyoutItem Title="Notes" Icon="icon_notes.png">
         <!-- Tabs dentro del Flyout -->
         <Tab Title="Notes" Icon="icon_notes.png">
