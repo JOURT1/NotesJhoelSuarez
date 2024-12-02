@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="Notes.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:views="clr-namespace:Notes.Views"
+    >
+
+    <!-- Flyout Items -->
+    <FlyoutItem Title="Notes" Icon="icon_notes.png">
+        <!-- Tabs dentro del Flyout -->
+        <Tab Title="Notes" Icon="icon_notes.png">
+            <ShellContent
+                ContentTemplate="{DataTemplate views:AllNotesPage}" />
+        </Tab>
+
+        <Tab Title="About" Icon="icon_about.png">
+            <ShellContent
+                ContentTemplate="{DataTemplate views:AboutPage}" />
+        </Tab>
+    </FlyoutItem>
+
+    <!-- Otra sección en el Flyout -->
+    <FlyoutItem Title="About Direct" Icon="icon_about.png">
+        <ShellContent
+            Title="About"
+            ContentTemplate="{DataTemplate views:AboutPage}" />
+    </FlyoutItem>
+</Shell>
