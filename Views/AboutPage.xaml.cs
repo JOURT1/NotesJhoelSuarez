@@ -11,8 +11,13 @@ public partial class AboutPage : ContentPage
     {
         if (BindingContext is Models.About about)
         {
-            // Navigate to the specified URL in the system browser.
+            Console.WriteLine($"Navigating to: {about.MoreInfoUrl}");
             await Launcher.Default.OpenAsync(about.MoreInfoUrl);
         }
+        else
+        {
+            Console.WriteLine("BindingContext is not of type About.");
+        }
     }
+
 }

@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:models="clr-namespace:Notes.Models"
              x:Class="Notes.Views.AboutPage"
              Title="About"
              BackgroundColor="Black">
+    <ContentPage.BindingContext>
+        <models:About />
+    </ContentPage.BindingContext>
+
     <VerticalStackLayout Spacing="10" Margin="10">
-        <!-- Imagen -->
         <Image Source="meme.png" 
                SemanticProperties.Description="Foto de Jhoel Suárez" 
-               
                HorizontalOptions="Center" />
-
-        <!-- Nombre -->
         <Label FontSize="24" 
                FontAttributes="Bold" 
                HorizontalOptions="Center" 
                Text="Jhoel Suárez"
                TextColor="White"/>
-
-        <!-- Descripción personal -->
         <Label FontSize="16" 
                TextColor="White"
                HorizontalOptions="Center" 
                Text="Tengo 20 años, soy estudiante de Ingeniería de Software cursando el quinto semestre. Me gustan los deportes, en especial entrenar en el gimnasio, los carros y las motos." />
+        <Button Text="Learn more..." Clicked="LearnMore_Clicked" />
     </VerticalStackLayout>
 </ContentPage>

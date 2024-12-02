@@ -1,9 +1,10 @@
-﻿namespace Notes.Models;
-
-internal class About
+﻿namespace Notes.Models
 {
-    public string Title => AppInfo.Name;
-    public string Version => AppInfo.VersionString;
-    public string MoreInfoUrl => "https://aka.ms/maui";
-    public string Message => "This app is written in XAML and C# with .NET MAUI.";
+    public class About
+    {
+        public string Title { get; set; } = "Acerca de la App";
+        public string Version { get; set; } = "1.0.0";
+        public string Message { get; set; } = "Información básica de la app.";
+        public string MoreInfoUrl { get; set; } = "https://aka.ms/maui"; // URL válida
+    }
 }
